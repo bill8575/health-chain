@@ -32,6 +32,8 @@ A "Blockchain" clinic with members are care providers(doctors) and patients. The
     },
 - On another terminal, cd into the local health-chain folder
 - from health-chain$ 
+- (npm install)
+- (npm init)
 - truffle migrate --reset
 - cd into the "client" folder
 - npm start 
@@ -53,6 +55,47 @@ To create a production build, use yarn build.
 - Follow the included video to run the UI
 
 - Finally, to complete the rest of the tests
+(Only the enrolDoctor, getDoctors, getTotalDoctors solidity functions are included in this UI test, more functionalities are tested by the healthchainTest script in the test/ folder.)
 - review the test script, health-chain/test/healthchainTest.js
 - run "truffle test"
 
+# Design pattern 
+See design_pattern_decisions.md 
+
+# Security Measure / Avoid Common Attacks
+See avoiding_common_attacks.md 
+
+# Use of Library in a contract 
+I did not use library in the health-chain contract. Created a LibraryDemo truffle project and contract (LibraryDemo.sol) to demonstrate the use of a simple custom Library (TestLib.sol)
+
+https://github.com/bill8575/LibraryDemo.git
+
+To test the using of library TestLib.sol, a test contract is created in the test/ folder. To run the test script, do "truffle test"
+
+# Deploying to Rinkeby 
+
+3_deploy_healthchain_contract.js
+================================
+
+   Deploying 'HealthChain'
+   -----------------------
+   > transaction hash:    0x4b248a2dd0c6343c3ab6f8f2bf5f51d2694910e55f1df4cbba61aa4825e991d3
+   > Blocks: 0            Seconds: 9
+   > contract address:    0x582B658394e00EcEF7024777D918bfd2f9bB9430
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   > block number:        4813736
+   > block timestamp:     1564335962
+   > account:             0x56c413b9DF155DB41f48cDDbb68e7e3Ebd12a2fc
+   > balance:             2.918861362
+   > gas used:            988816
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.01977632 ETH
+
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:          0.01977632 ETH
+
+   
