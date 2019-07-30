@@ -28,9 +28,9 @@ contract('HealthChain', function (accounts) {
     await catchRevert(instance.createDoctor(282, { from: doctor1 }))
   })
 
-  it('successful adding of account[0] or admin1 as a doctor', async () => {
+  it('successful adding of accounts[0] or admin1 as a doctor', async () => {
     var isADoctor = await instance.isDoctor(accounts[0], { from: admin1 })
-    assert.equal(isADoctor, false, 'account[0] or admin1 should have not initiated as a doctor')
+    assert.equal(isADoctor, false, 'accounts[0] or admin1 should have not initiated as a doctor')
     await instance.createDoctor(212, { from: admin1 })
     isADoctor = await instance.isDoctor(accounts[0], { from: admin1 })
     assert.equal(isADoctor, true, 'createDoctor failed to add account[0] or admin1 as a doctor')
@@ -47,5 +47,13 @@ contract('HealthChain', function (accounts) {
     assert.equal(docCount, 4, 'after deleting accounts[4] from doctors, there should be 4 doctors')
     var isADoctor = await instance.isDoctor(accounts[4], { from: admin1 })
     assert.equal(isADoctor, false, 'with successful delete failed to report account[4] as a doctor to be false')
+  })
+
+  it('successful erolling of accounts[0] to a doctor via its doctorId', async () => {
+    var isPatientOf = await instance.isPatientOf(101, { from: accounts[0] })
+    assert.equal(isPatientOf, false, 'accounts[0] should not have been a patient of doctor 101 yet')
+    await instance.enrolPatient(101, { from: accounts[0] })
+    isPatientOf = await instance.isPatientOf(101, { from: accounts[0] })
+    assert.equal(isPatientOf, true, 'accounts[0] failed to register as a patient of doctor 101')
   })
 })

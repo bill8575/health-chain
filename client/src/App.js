@@ -120,7 +120,7 @@ class App extends Component {
         "Create doctor".
         </p>
         <div>
-            <p>[[Doctors] [DoctorID]]:</p> 
+            <p>[[Doctor],[DoctorID]]:</p> 
             <p>{JSON.stringify(jsonData)} </p>
         </div>
         <div>
