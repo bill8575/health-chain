@@ -2,16 +2,17 @@
 Ethereum DAPP Contracts (written in Solidity)
 
 # Description
-A "Blockchain" clinic with members are care providers(doctors) and patients. There are also admins (2 were preset). There are some functions that can only be called by admins such as deleteDoctor().
+A "Blockchain" clinic with members being care providers(doctors) and patients. There are also admins (2 have been preset when deploying locally). Some functions can only be called by admins such as deleting a doctor.
 
 - Any member can enrol as a doctor
-- Only admins can delete a doctor
+- Only admins can delete doctors
 - Any member can register with a doctor 
-- Registration creates a registry struct with a MRN generated
-- MRN is a global counter tracking number of patient-doctor registration mappings 
-- Only doctor can submit a MedicalRecord for its own patients which means there exists a patient-doctor registration mapping
-- MedicalRecord is created with _verified attribute set False
-- A Patient is identified by a MRN in the MedicalRecord struct
+- Registration creates a registry struct entry with a MRN generated
+- MRN is a global counter tracking number of the patient-doctor registration mappings 
+- Only doctor can submit a Medical Record for its own patients which means there must exist a patient-doctor registration mapping
+- Medical Record is created with the "verified" attribute set False
+- A Patient is identified by a MRN in the Medical Record struct
+- "verified" must be (to true) by the patient represented by the MRN in the Medical Record 
 
 # Tools required to run 
 1. Node and npm installed 
