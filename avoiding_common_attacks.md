@@ -4,7 +4,7 @@ Common Attacks
 
 Re-entrancy Attacks:
 
-Make sure the handling of gas or eth transfer are settled after the fulfilling of conditions on which the transaction depends. Rapid calling of the contract function could have the fund transfer code called numerous times while the supposely coupled set condition was never reached. This could create a draining of "funds" when rogue contracts manipulating the gas calculation were used as the system gets dragged into a recursive loop.
+Make sure the handling of gas or eth transfer are settled after the fulfilling of state on which the transaction depends. Rapid calling of the contract function could have the fund transfer code called numerous times while the supposely coupled set condition was never reached. This could create a draining of "funds" when rogue contracts manipulating the gas calculation were used as the system gets dragged into a recursive loop.
 
 Denial of Services:
 
