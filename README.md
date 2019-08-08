@@ -12,7 +12,7 @@ A "Blockchain" clinic with members being care providers(doctors) and patients. T
 - Only doctor can submit a Medical Record for its own patients which means there must exist a patient-doctor registration mapping
 - Medical Record is created with the "verified" attribute set False
 - A Patient is identified by a MRN in the Medical Record struct
-- "verified" must be (to true) by the patient represented by the MRN in the Medical Record 
+- The "verified" flag must and can only be set (to true) by the patient represented by the MRN in the Medical Record 
 
 # Tools required to run 
 1. Node and npm installed 
@@ -20,7 +20,8 @@ A "Blockchain" clinic with members being care providers(doctors) and patients. T
 3. A local Ethereum development server such as ganache
 4. Metamask is added to Chrome 
 
-# How to run
+# How to run the UI client
+(The UI demonstrates the enrolling of a doctor. You will see the added doctor and its doctorId included in the list of doctors)
 - Run the local Ethereum development server, I use ganache-cli
 - From a terminal/command prompt, fire up ganache-cli
 - git clone https://github.com/bill8575/health-chain.git 
@@ -54,7 +55,7 @@ To create a production build, use yarn build.
 - Go to Chrome and fire up http://localhost:3000/
 - Make sure MetaMask is set to the local development server 
 - Follow the included video to run the UI
-
+(You should be running the UI as accounts[0] as accounts[1] through accounts[3] have already been added by the contract's constructor)
 - Finally, to complete the rest of the tests
 (Only the enrolDoctor, getDoctors, getTotalDoctors solidity functions are included in this UI test, more functionalities are tested by the healthchainTest script in the test/ folder.)
 - review the test script, health-chain/test/healthchainTest.js
