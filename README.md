@@ -101,6 +101,3 @@ To test the using of library TestLib.sol, a test contract is created in the test
    > Total cost:          0.01977632 ETH
 
    
-   20190808
-
-   First Name Email Address Link to Project Code  Link to Project Demo  Group
