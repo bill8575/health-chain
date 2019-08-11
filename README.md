@@ -67,7 +67,7 @@ See design_pattern_decisions.md
 # Security Measure / Avoid Common Attacks
 See avoiding_common_attacks.md 
 
-# Use of Library in a contract 
+# Use of Library (inherits from another contract) in a contract 
 I did not use library in the health-chain contract. Created a LibraryDemo truffle project and contract (LibraryDemo.sol) to demonstrate the use of a simple custom Library (TestLib.sol)
 
 https://github.com/bill8575/LibraryDemo.git
@@ -101,3 +101,6 @@ To test the using of library TestLib.sol, a test contract is created in the test
    > Total cost:          0.01977632 ETH
 
    
+   20190808
+
+   First Name Email Address Link to Project Code  Link to Project Demo  Group

@@ -1,0 +1,25 @@
+# Deploying to Rinkeby 
+
+3_deploy_healthchain_contract.js
+================================
+
+   Deploying 'HealthChain'
+   -----------------------
+   > transaction hash:    0x4b248a2dd0c6343c3ab6f8f2bf5f51d2694910e55f1df4cbba61aa4825e991d3
+   > Blocks: 0            Seconds: 9
+   > contract address:    0x582B658394e00EcEF7024777D918bfd2f9bB9430
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   > block number:        4813736
+   > block timestamp:     1564335962
+   > account:             0x56c413b9DF155DB41f48cDDbb68e7e3Ebd12a2fc
+   > balance:             2.918861362
+   > gas used:            988816
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.01977632 ETH
+
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:          0.01977632 ETH
